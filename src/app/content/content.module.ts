@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DummyContentComponent } from './dummy-content/dummy-content.component';
+import { OneComponent } from './one/one.component';
+import { TwoComponent } from './two/two.component';
+import { ThreeComponent } from './three/three.component';
 
 @NgModule({
   imports: [
     CommonModule
   ],
-  declarations: [DummyContentComponent]
+  declarations: [OneComponent, TwoComponent, ThreeComponent]
 })
 export class ContentModule { }

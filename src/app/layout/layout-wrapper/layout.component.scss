@@ -1,8 +1,5 @@
 @import "../layout-variables";
 
-$content-padding-verticals: 12px;
-$content-padding-horizontals: 8px;
-
 .layout-wrapper {
   display: flex;
   flex-direction: column;
@@ -16,22 +13,4 @@ $content-padding-horizontals: 8px;
 .below-header-content {
   display: flex;
   flex: 1;
-}
-
-.content {
-  flex: 1;
-  margin-left: $side-nav-width;
-  margin-bottom: $footer-height;
-  padding: $content-padding-verticals $content-padding-horizontals;
-  min-width: calc(100vw - (#{$side-nav-width} + #{$content-padding-horizontals}*2));
-  min-height: calc(100vh - (#{$header-height} + #{$footer-height} + #{$content-padding-verticals}*2));
-}
-
-main {
-  display: flex;
-  flex-direction: column;
-  > *:not(router-outlet) {
-    flex: 1;
-    display: block;
-  }
 }

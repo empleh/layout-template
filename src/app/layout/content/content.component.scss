@@ -1,0 +1,19 @@
+@import "../layout-variables";
+
+.content {
+  flex: 1;
+  margin-left: $side-nav-width;
+  margin-bottom: $footer-height;
+  padding: $content-padding-verticals $content-padding-horizontals;
+  min-width: calc(100vw - (#{$side-nav-width} + #{$content-padding-horizontals}*2));
+  min-height: calc(100vh - (#{$header-height} + #{$footer-height} + #{$content-padding-verticals}*2));
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  > *:not(router-outlet) {
+    flex: 1;
+    display: block;
+  }
+}
