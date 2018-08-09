@@ -1,4 +1,5 @@
 @import "../layout-variables";
+@import "../../../theme";
 
 header {
   position: fixed;
@@ -15,4 +16,12 @@ header {
 
 .mat-toolbar-single-row {
   height: $header-height;
+  padding-right: 0;
+}
+
+.header-button{
+  margin: 0;
+  background: darken($app-primary-color, 10%);
+  height: $header-height;
+  padding-right: 64px;
 }

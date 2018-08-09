@@ -1,0 +1,20 @@
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+@import '~@angular/material/theming';
+@include mat-core();
+
+$app-primary-palette: mat-palette($mat-indigo);
+$app-accent-palette: mat-palette($mat-green);
+$app-warn-palette: mat-palette($mat-deep-orange);
+
+
+$app-theme: mat-light-theme($app-primary-palette, $app-accent-palette, $app-warn-palette);
+
+@include angular-material-theme($app-theme);
+
+
+$app-primary-color: mat-color($app-primary-palette);
+$app-accent-color: mat-color($app-accent-palette);
+
+
+$app-primary-font: white;

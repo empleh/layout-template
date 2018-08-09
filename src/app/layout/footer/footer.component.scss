@@ -1,5 +1,5 @@
 @import "../layout-variables";
-@import "../../../variables";
+@import "../../../theme";
 
 footer {
   position: fixed;
@@ -7,7 +7,7 @@ footer {
   left: 0;
   right: 0;
   height: $footer-height;
-  background: $accent-color;
+  background: $app-accent-color;
   text-align: center;
   padding-left: $side-nav-width;
   z-index: 2;

@@ -8,6 +8,7 @@ import {ContentModule} from './content/content.module';
 import {OneComponent} from './content/one/one.component';
 import {TwoComponent} from './content/two/two.component';
 import {ThreeComponent} from './content/three/three.component';
+import {FormsModule} from '@angular/forms';
 
 const routes: Routes = [
   { path: 'One', component: OneComponent },
@@ -24,7 +25,8 @@ const routes: Routes = [
     BrowserModule,
     LayoutModule,
     RouterModule.forRoot(routes),
-    ContentModule
+    ContentModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

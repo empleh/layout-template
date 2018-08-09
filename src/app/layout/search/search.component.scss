@@ -1,0 +1,30 @@
+@import "../layout-variables";
+@import "../../../theme";
+
+.app-search {
+  background: darken($app-primary-color, 10%);
+  height: $header-height;
+  display: flex;
+
+  button {
+    background: darken($app-primary-color, 10%);
+  }
+
+  input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    height: calc(100% - 8px);
+    color: $app-primary-font;
+    font-size: 1.5rem;
+    padding: 4px 12px;
+
+    &:focus{
+      background: lighten($app-primary-color, 10%);
+    }
+
+    @include input-placeholder {
+      color: $app-primary-font;
+    }
+  }
+}

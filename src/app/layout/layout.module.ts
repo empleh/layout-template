@@ -7,14 +7,18 @@ import {LayoutComponent} from './layout-wrapper/layout.component';
 import {MaterialModule} from '../material/material.module';
 import {RouterModule} from '@angular/router';
 import {ContentComponent} from './content/content.component';
+import { SearchComponent } from './search/search.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule,
     MaterialModule,
-    RouterModule
+    RouterModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
-  declarations: [HeaderComponent, SidebarComponent, FooterComponent, LayoutComponent, ContentComponent],
+  declarations: [HeaderComponent, SidebarComponent, FooterComponent, LayoutComponent, ContentComponent, SearchComponent],
   exports: [LayoutComponent]
 })
 export class LayoutModule {
