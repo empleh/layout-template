@@ -2,13 +2,10 @@
 @import "../../../theme";
 
 footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: $footer-height;
-  background: $app-accent-color;
+  background: $app-primary-color;
+  color: $app-primary-font;
   text-align: center;
   padding-left: $side-nav-width;
   z-index: 2;
+  height: 100%;
 }

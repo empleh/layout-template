@@ -9,6 +9,7 @@ import {RouterModule} from '@angular/router';
 import {ContentComponent} from './content/content.component';
 import { SearchComponent } from './search/search.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { ContentHeaderComponent } from './content-header/content-header.component';
 
 @NgModule({
   imports: [
@@ -18,7 +19,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     FormsModule,
     ReactiveFormsModule
   ],
-  declarations: [HeaderComponent, SidebarComponent, FooterComponent, LayoutComponent, ContentComponent, SearchComponent],
+  declarations: [HeaderComponent, SidebarComponent, FooterComponent, LayoutComponent, ContentComponent, SearchComponent, ContentHeaderComponent],
   exports: [LayoutComponent]
 })
 export class LayoutModule {

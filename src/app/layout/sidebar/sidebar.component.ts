@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {MenuItem} from './menu-item';
+import {AppRouting} from '../../app.routing';
 
 @Component({
   selector: 'app-sidebar',
@@ -13,11 +14,7 @@ export class SidebarComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.menuItems = [
-      new MenuItem('One'),
-      new MenuItem('Two'),
-      new MenuItem('Three')
-    ];
+    this.menuItems = AppRouting.menuItems;
   }
 
 }

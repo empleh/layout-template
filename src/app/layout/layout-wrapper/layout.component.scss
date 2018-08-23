@@ -1,16 +1,51 @@
 @import "../layout-variables";
+@import "../../../theme";
 
-.layout-wrapper {
+.container {
+  width: 100vw;
+  height: 100vh;
   display: flex;
+  justify-content: flex-start;
   flex-direction: column;
-  position: absolute;
-  top: $header-height;
-  bottom: 0;
-  left: 0;
-  right: 0;
 }
 
-.below-header-content {
+.header{
+  height: $header-height;
+  width: 100vw;
+}
+
+.below-header{
+  height: calc(100vh - (#{$header-height} - #{$footer-height}));
+  width: 100vw;
   display: flex;
-  flex: 1;
+  justify-content: flex-start;
+  flex-direction: row;
+}
+
+.footer{
+  height: $footer-height;
+  width: 100vw;
+}
+
+.sidebar{
+  background: $app-accent-color;
+  width: $side-nav-width;
+}
+
+.content-wrapper{
+  width: calc(100vw - #{$side-nav-width});
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.content-header{
+  height: $content-header-height;
+  background: lightgray;
+}
+
+.content-body{
+  height: 100vh;
+  max-height: 100vh;
+  overflow: auto;
 }
