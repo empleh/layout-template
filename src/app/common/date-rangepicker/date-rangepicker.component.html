@@ -1,0 +1,56 @@
+<div class="pps-daterangepicker" [ngClass]="{ 'is-active': !!opened }">
+  <div #fromInput class="input-section" (click)="toggleCalendar($event, 'from')" [class.selected-input-section]="opened === 'from'">
+    <span class="label-txt">{{options.labels[0]}}</span>
+    <span class="value-txt">{{ dateFrom | daterangeFormat: options.dateFormat }}</span>
+    <span class="cal-icon">
+      <mat-icon>event_note</mat-icon>
+    </span>
+  </div>
+
+  <div class="input-section" (click)="toggleCalendar($event, 'to')" [class.selected-input-section]="opened === 'to'">
+    <span class="label-txt">{{options.labels[1]}}</span>
+    <span class="value-txt">{{ dateTo | daterangeFormat: options.dateFormat }}</span>
+    <span class="cal-icon">
+      <mat-icon>event_note</mat-icon>
+    </span>
+  </div>
+
+  <div class="calendar" [ngClass]="{ 'is-opened': !!opened, 'is-to': opened === 'to' }">
+    <div class="arrow" [ngStyle]="{left: (arrowLeft || 60) + 'px'}"></div>
+    <div class="calendar-container">
+      <div class="controls">
+        <button class="control-icon" mat-icon-button color="default" (click)="prevMonth()">
+          <mat-icon>keyboard_arrow_left</mat-icon>
+        </button>
+        <span class="control-title capitalize">
+          {{ date | daterangeFormat:'MMMM YYYY':options.locale }}
+        </span>
+        <button class="control-icon" mat-icon-button color="default" (click)="nextMonth()">
+          <mat-icon>keyboard_arrow_right</mat-icon>
+        </button>
+      </div>
+      <div class="day-names">
+        <span class="day-name" *ngFor="let name of dayNames">{{ name }}</span>
+      </div>
+      <div class="days">
+        <div class="day" *ngFor="let d of days; let i = index;" [ngClass]="{
+               'is-within-range': d.isWithinRange,
+               'is-from': d.from,
+               'is-to': d.to }"
+          (click)="selectDate($event, i)">
+          <span *ngIf="d.visible" class="day-num" [class.is-active]="d.from || d.to">{{ d.day }}</span>
+        </div>
+      </div>
+    </div>
+    <div class="side-container" *ngIf="options.menu && options.menu.length > 0">
+      <div class="side-container-buttons">
+        <button type="button" class="side-button" *ngFor="let range of options.menu" (click)="selectRange(range)"
+          [class.is-active]="range.active">{{range.text}}
+        </button>
+      </div>
+      <button mat-icon-button class="close-icon" color="default" (click)="closeCalendar($event)">
+        <mat-icon>close</mat-icon>
+      </button>
+    </div>
+  </div>
+</div>

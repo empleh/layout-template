@@ -1,0 +1,20 @@
+<div class="daterange-wrapper">
+  <div class="daterange-picker">
+    <app-date-rangepicker
+      [options]="options"
+      [(ngModel)]="value"
+      (ngModelChange)="dateChanged($event)"
+      (calendarToggleEvent)="pickerToggleEvent($event)">
+    </app-date-rangepicker>
+  </div>
+  <div class="daterange-select">
+    <button class="primary-button-background" mat-flat-button
+      (click)="dateRangeSelected()">
+      Select
+    </button>
+  </div>
+</div>
+
+
+
+
